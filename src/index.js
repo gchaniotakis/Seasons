@@ -25,7 +25,7 @@ class App extends React.Component{
         if (this.state.errorMessage && !this.state.lat){
             return (<div className = "error">
                 <i className = {`icon-left massive ban icon`}/>
-                <h1>Error: {this.state.errorMessage}, please reload the page and select "Allow"</h1>
+                <h1>Error: {this.state.errorMessage}, please select "Allow" and reload the page</h1>
                 <i className = {`icon-right massive ban icon`}/>
                 </div>
                 );
