@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 import Loader from './Loader';
+import './SeasonDisplay.css';
 
 class App extends React.Component{  
 
@@ -22,7 +23,12 @@ class App extends React.Component{
     
     render(){
         if (this.state.errorMessage && !this.state.lat){
-            return <div>Error: {this.state.errorMessage}</div>;
+            return (<div className = "error">
+                <i className = {`icon-left massive ban icon`}/>
+                <h1>Error: {this.state.errorMessage}, please reload the page and select "Allow"</h1>
+                <i className = {`icon-right massive ban icon`}/>
+                </div>
+                );
         }
         
         if(!this.state.errorMessage && this.state.lat){
