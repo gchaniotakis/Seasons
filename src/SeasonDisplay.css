@@ -40,3 +40,8 @@
     align-items: center;
     height: 100vh;
 }
+
+.border-black{
+    border: 100 px;
+    border-color: black;
+}
